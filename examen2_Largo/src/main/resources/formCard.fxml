@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<TabPane xmlns:fx="http://javafx.com/fxml/1"
+         fx:controller="co.edu.poli.examen2_Largo.controlador.ControlFormCard">
+
+    <!-- ================= CREAR ================= -->
+    <Tab text="Crear Tarjeta">
+        <AnchorPane>
+
+            <Label layoutX="20" layoutY="20" text="Número"/>
+            <TextField fx:id="txtNumero" layoutX="140" layoutY="15"/>
+
+            <Label layoutX="20" layoutY="60" text="Fecha"/>
+            <DatePicker fx:id="dpFecha" layoutX="140" layoutY="55"/>
+
+            <Label layoutX="20" layoutY="100" text="Titular"/>
+            <ComboBox fx:id="cbTitular" layoutX="140" layoutY="95"/>
+
+            <RadioButton fx:id="rbDebito"
+                         layoutX="140"
+                         layoutY="140"
+                         text="Débito"/>
+
+            <RadioButton fx:id="rbCredito"
+                         layoutX="220"
+                         layoutY="140"
+                         text="Crédito"/>
+
+            <Button layoutX="140"
+                    layoutY="190"
+                    text="Crear"
+                    onAction="#crear"/>
+
+            <Label fx:id="lblResultadoCrear"
+                   layoutX="140"
+                   layoutY="230"
+                   prefWidth="300"/>
+
+        </AnchorPane>
+    </Tab>
+
+    <!-- ================= CONSULTAR ================= -->
+    <Tab text="Consultar">
+        <AnchorPane>
+
+            <Label layoutX="20" layoutY="30" text="Número"/>
+            <TextField fx:id="txtBuscarNumero" layoutX="140" layoutY="25"/>
+
+            <Button layoutX="140"
+                    layoutY="70"
+                    text="Buscar"
+                    onAction="#consultar"/>
+
+            <Label fx:id="lblResultadoConsulta"
+                   layoutX="140"
+                   layoutY="120"
+                   prefWidth="400"
+                   wrapText="true"/>
+
+        </AnchorPane>
+    </Tab>
+
+</TabPane>
